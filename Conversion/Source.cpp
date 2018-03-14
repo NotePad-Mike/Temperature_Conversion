@@ -10,6 +10,7 @@
 
 using namespace std;
 
+//Recieves and returns an integer input by a user
 int getCelsius()
 {
 	//Enter the temp in Celsius
@@ -31,6 +32,7 @@ int getCelsius()
 
 }
 
+//Accepts an integer and converts it into fahrenheit
 int tempConversion(int celsius)
 {
 	//Calculate conversion factor for Celsius to Fahrenheit
@@ -41,6 +43,7 @@ int tempConversion(int celsius)
 	return factor * celsius / 100 + 32;
 }
 
+//Accepts the converted temp and outputs the results for the user
 void printResults(int fahrenheit)
 {
 	//Accepts the converted temp and prints results to user
@@ -48,6 +51,7 @@ void printResults(int fahrenheit)
 	cout << fahrenheit << endl;
 }
 
+//Ask the user if they want to continue and return either true or false
 bool exitProgram()
 {
 	//Check to see if user wants to quit
