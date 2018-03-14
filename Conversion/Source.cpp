@@ -21,11 +21,13 @@ int main(int nNumberofArgs, char* pszArgs[]) {
 		cout << "Enter the temperature in Celsius: ";
 		cin >> celsius;
 
-		if (celsius == -858993460)
+		while(cin.fail())
 		{
 			cout << "You entered something you shouldn't have!" << endl;
-			cout << "Please try again and enter a number this time." << endl;
-			break;
+			cout << "Please try again and enter a number this time: ";
+			cin.clear();
+			cin.ignore(256, '\n');
+			cin >> celsius;
 		}
 
 		//Calculate conversion factor for Celsius to Fahrenheit
