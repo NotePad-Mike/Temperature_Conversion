@@ -12,8 +12,8 @@ using namespace std;
 
 int main(int nNumberofArgs, char* pszArgs[]) {
 	//Loop to continue the program until the user enters -1
-	bool quit = false;
-	while (!quit)
+	bool quit = true;
+	while (quit)
 	{
 
 		//Enter the temp in Celsius
@@ -35,13 +35,13 @@ int main(int nNumberofArgs, char* pszArgs[]) {
 
 		//Check to see if user wants to quit
 		char yesNo;
-		cout << "Enter y to contine or n to quit: ";
+		cout << "Enter y to contine; anything else to quit: ";
 		cin >> yesNo;
 
-		//Check to see if user entered n
-		if (yesNo == 'n')
+		//Check to see if user entered y
+		if (yesNo != 'y')
 		{
-			quit = true;
+			quit = false;
 		}
 	}
 	//Wait until the user is ready before terminating the program
