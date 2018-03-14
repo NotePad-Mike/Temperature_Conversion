@@ -21,6 +21,7 @@ int main(int nNumberofArgs, char* pszArgs[]) {
 		cout << "Enter the temperature in Celsius: ";
 		cin >> celsius;
 
+		//Check and make sure a number was entered by the user
 		while(cin.fail())
 		{
 			cout << "You entered something you shouldn't have!" << endl;
